@@ -1,0 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
+<c:if test="${errors != null}">
+    <div id="error">
+    Detect certain errors during input:
+    <c:set var="count" value="1" scope="page"/>
+    <c:forEach items="${errors}" var="error">
+        ${count}.&nbsp ${error} </ br>
+        <c:set var="count" value="${count + 1}" scope="page"/>
+    </c:forEach>
+    </div>
+</c:if>
